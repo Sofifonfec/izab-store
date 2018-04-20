@@ -1,0 +1,30 @@
+.categories {
+
+	background-color: rgba($peach, .7);
+
+	&__container {
+		display: flex;
+		padding-top: 50px;
+		padding-bottom: 30px; 
+		text-align: center;
+	}
+
+	&__wrap {
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__photo {
+		border-radius: 80px;
+		border: 2px solid rgba(255, 255, 255, .5); 
+		overflow: hidden;
+		width: 160px;
+		heigh: 160px; 
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-weight: 500;
+		letter-spacing: 2px;
+	}
+}
