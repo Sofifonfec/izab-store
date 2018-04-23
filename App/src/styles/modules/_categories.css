@@ -1,6 +1,6 @@
 .categories {
 
-	background-color: rgba($peach, .7);
+	background-color: rgba($peach, .5);
 
 	&__container {
 		display: flex;

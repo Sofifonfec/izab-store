@@ -1,0 +1,38 @@
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 500px 500px 500px;
+
+	&__txt {
+		max-width: 500px;
+		margin: 30px auto;
+	}
+
+	&__image {
+		
+	}
+
+	&__photo {
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__title {
+		text-align: center;
+
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		font-weight: 500;
+		letter-spacing: 2px;
+		color: $mainBlue;
+
+		&__deco {
+			font-family: 'News Cycle', sans-serif;
+		}
+	}
+
+	&__para {
+		line-height: 1.9;
+		font-size: 1.1rem;
+	}
+}

@@ -9,6 +9,10 @@ body {
 	color: $mainGrey;
 }
 
+h2, h3 {
+	font-family: 'Old Standard TT', serif;
+}
+
 img {
 	max-width: 100%;
 }
