@@ -1,10 +1,10 @@
 .categories {
-
-	background-color: rgba($peach, .5);
+	height: 350px;
+	background-color: rgba(#079992, .8);
 
 	&__container {
 		display: flex;
-		padding-top: 50px;
+		padding-top: 75px;
 		padding-bottom: 30px; 
 		text-align: center;
 	}
@@ -26,5 +26,6 @@
 		text-transform: uppercase;
 		font-weight: 500;
 		letter-spacing: 2px;
+		color: #fff;
 	}
 }

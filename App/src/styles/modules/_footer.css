@@ -14,7 +14,7 @@ footer {
 	}
 
 	&__btn {
-		border: 2px solid #111;
+		border: 1px solid #111;
 		padding: 5px 40px; 
 		text-transform: uppercase;
 		font-weight: 600;
@@ -23,7 +23,8 @@ footer {
 		transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
 
 		&:hover {
-			background-color: rgba($peach, .7);
+			background-color: rgba(#079992, .5);
+			color: #111;
 		}
 	}
 
@@ -62,7 +63,7 @@ footer {
 	}
 
 	&__icons-container a:hover:before {
-			background-color: rgba($peach, .7);
+			background-color: rgba(#079992, .5);
 		}
 
 	&__links {

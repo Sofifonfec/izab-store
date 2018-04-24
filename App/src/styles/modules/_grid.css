@@ -6,6 +6,7 @@
 	&__txt {
 		max-width: 500px;
 		margin: 30px auto;
+		text-align: justify;
 	}
 
 	&__image {

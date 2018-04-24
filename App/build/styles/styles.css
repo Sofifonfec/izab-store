@@ -459,10 +459,19 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'News Cycle', sans-serif;
+	color: #111;
+}
+
+p {
 	color: #596275;
 }
 
-h2, h3 {
+h1 {
+	font-family: 'Dosis', sans-serif;
+	letter-spacing: 0.3em;
+}
+
+h2 {
 	font-family: 'Old Standard TT', serif;
 }
 
@@ -490,14 +499,16 @@ li {
 .header-menu {
 	position: fixed;
 	width: 100%;
-	z-index: 2;
-	background-color: rgba(255, 255, 255, .7);
+	z-index: 1;
+	background-color: rgba(241,242,246, .7);
 	padding-bottom: 10px;
 }
 
 .header-menu__logo {
 	float: left;
 	padding-top: 10px;
+	width: 156px;
+	height: 50px;
 	}
 
 .header-menu__nav {
@@ -505,6 +516,8 @@ li {
 		padding-top: 33px;
 		font-weight: 500;
 		letter-spacing: 2px;
+		color: #111;
+		font-family: 'Dosis', sans-serif;
 	}
 
 .header-menu__list::after {
@@ -514,8 +527,8 @@ li {
 	}
 
 .header-menu__item {
-		-webkit-transition-duration: .3s;
-		        transition-duration: .3s; 
+		-webkit-transition-duration: .26s;
+		        transition-duration: .26s; 
 	}
 
 .header-menu__item:hover, .header-menu__item__item.is-active {
@@ -528,6 +541,7 @@ li {
 		display: inline-block;
 		padding: 0 30px;
 		cursor: text;
+		font-family: 'News Cycle', sans-serif;
 		}
 
 .header-menu__1:before {
@@ -543,7 +557,16 @@ li {
 	height: 100vh;
 	background: url(../../src/images/header.jpg) top center fixed;
 	background-size: cover;
+	color: #111;
 }
+
+.header-banner__img {
+		position: absolute;
+		top: 39%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+	}
 
 .header-banner__txt {
 		position: absolute;
@@ -557,10 +580,9 @@ li {
 	}
 
 .header-banner__title {
-		font-size: 2.5rem;
-		font-weight: 700;
+		font-size: 3rem;
+		font-weight: 400;
 		text-transform: uppercase;
-		letter-spacing: 5px;
 	}
 
 .header-banner__subtitle {
@@ -588,15 +610,15 @@ li {
 	}
 
 .categories {
-
-	background-color: rgba(243,166,131, .5);
+	height: 350px;
+	background-color: rgba(7,153,146, .8);
 }
 
 .categories__container {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
-		padding-top: 50px;
+		padding-top: 75px;
 		padding-bottom: 30px; 
 		text-align: center;
 	}
@@ -620,6 +642,7 @@ li {
 		text-transform: uppercase;
 		font-weight: 500;
 		letter-spacing: 2px;
+		color: #fff;
 	}
 
 .grid {
@@ -631,6 +654,7 @@ li {
 .grid__txt {
 		max-width: 500px;
 		margin: 30px auto;
+		text-align: justify;
 	}
 
 .grid__image {
@@ -680,7 +704,7 @@ footer {
 	}
 
 .footer__btn {
-		border: 2px solid #111;
+		border: 1px solid #111;
 		padding: 5px 40px; 
 		text-transform: uppercase;
 		font-weight: 600;
@@ -691,7 +715,8 @@ footer {
 	}
 
 .footer__btn:hover {
-			background-color: rgba(243,166,131, .7);
+			background-color: rgba(7,153,146, .5);
+			color: #111;
 		}
 
 .footer__copy {
@@ -736,7 +761,7 @@ footer {
 	}
 
 .footer__icons-container a:hover:before {
-			background-color: rgba(243,166,131, .7);
+			background-color: rgba(7,153,146, .5);
 		}
 
 .footer__links {
@@ -773,6 +798,67 @@ footer {
 		float: left;
 		width: 33.33%;	
 		margin-bottom: 30px;
+	}
+
+.quote {
+	width: 100%;
+	height: 500px;
+	position: relative;
+	background: #079992 center top fixed;
+}
+
+.quote::before {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+.quote__txt {
+		margin: auto;
+		width: 600px;
+		position: absolute;
+		top: 42%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+		font-size: 2rem;
+		color: #fff;
+		font-family: 'Dosis', sans-serif;
+		letter-spacing: 0.2em;
+		line-height: 1.6;
+		text-align: justify;
+	}
+
+.quote__author {
+		position: absolute;
+		top: 65%;
+		left: 45%;
+		font-size: 1.2rem;
+		color: #fff;
+		font-family: 'Dosis', sans-serif;
+		padding-top: 20px;
+		font-style: normal;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+.quote__author:before {
+			content: "";
+			position: absolute;
+			top: -2px;
+			left: 50%;
+			margin-left: -25px;
+			width: 50px;
+			height: 2px;
+			background-color: #e17055;
+		}
+
+.quote__icon66 {
+		position: absolute;
+		left: 25%;
+		top: 31%;
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 
 
