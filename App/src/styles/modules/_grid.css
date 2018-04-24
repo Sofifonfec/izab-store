@@ -3,31 +3,21 @@
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 500px 500px 500px;
 
-	&__txt {
+	&__content {
 		max-width: 500px;
 		margin: 30px auto;
 		text-align: justify;
 	}
 
-	&__image {
-		
-	}
-
-	&__photo {
-		position: relative;
-		overflow: hidden;
-	}
-
 	&__title {
 		text-align: center;
-
 		text-transform: uppercase;
 		font-size: 1.4rem;
 		font-weight: 500;
-		letter-spacing: 2px;
+		letter-spacing: 0.125rem;
 		color: $mainBlue;
 
-		&__deco {
+		&--deco {
 			font-family: 'News Cycle', sans-serif;
 		}
 	}
@@ -35,5 +25,10 @@
 	&__para {
 		line-height: 1.9;
 		font-size: 1.1rem;
+	}
+
+	&__photo {
+		position: relative;
+		overflow: hidden;
 	}
 }

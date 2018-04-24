@@ -1,0 +1,14 @@
+.row {
+	
+	&__8 {
+		float: left;
+		width: 66.66%;
+		margin-bottom: 30px;
+	}
+
+	&__4 {
+		float: left;
+		width: 33.33%;	
+		margin-bottom: 30px;
+	}
+}

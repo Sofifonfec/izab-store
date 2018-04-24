@@ -1,6 +1,6 @@
 .categories {
 	height: 350px;
-	background-color: rgba(#079992, .8);
+	background-color: rgba($mainBlue, .8);
 
 	&__container {
 		display: flex;
@@ -19,7 +19,7 @@
 		border: 2px solid rgba(255, 255, 255, .5); 
 		overflow: hidden;
 		width: 160px;
-		heigh: 160px; 
+		height: 160px; 
 	}
 
 	&__title {

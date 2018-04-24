@@ -1,2 +1,4 @@
-const gulp = require('gulp');
-const watch = require('gulp-watch');
+import RevealOnScroll from './modules/RevealOnScroll';
+import $ from 'jquery';
+
+var revealOnScroll = new RevealOnScroll();

@@ -2,7 +2,7 @@
   "name": "concept",
   "version": "1.0.0",
   "scripts": {
-    "webpack": "webpack",
+    "webpack": "webpack --config webpack.config.js",
     "watch": "gulp watch"
   },
   "dependencies": {
