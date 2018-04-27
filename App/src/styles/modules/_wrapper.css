@@ -1,13 +1,23 @@
 .wrapper {
-	max-width: 1200px;
+	
+	padding-left: 18px;
+	padding-right: 18px;
+	max-width: 1236px;
 	margin-left: auto;
 	margin-right: auto;
 
-	&__clearfixB {
-		@mixin clearfixB
+	&--no-padding-until-small {
+		padding-left: 0;
+		padding-right: 0;
+
+		@mixin atSmall {
+			padding-left: 18px;
+			padding-right: 18px;
+		}
 	}
 
-	&__clearfix {
-		@mixin clearfix
+	.wrapper {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }

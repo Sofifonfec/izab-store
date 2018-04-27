@@ -4,30 +4,6 @@ footer {
 
 .footer {
 
-	&__contact {
-		width: 100%;
-		text-align: center;
-		margin-top: 3.125rem;
-		margin-bottom: 3.125rem;
-		color: $mainBlue;
-	}
-
-	&__btn {
-		border: 1px solid #111;
-		padding: 0.3125rem 2.5rem; 
-		text-transform: uppercase;
-		font-weight: 600;
-		font-size: 1.2rem;
-		letter-spacing: 0.180em;
-
-		transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-
-		&:hover {
-			background-color: rgba($mainBlue, .5);
-			color: #111;
-		}
-	}
-
 	&__title {
 		text-transform: uppercase;
 		font-weight: 500;
@@ -85,8 +61,32 @@ footer {
 
 		transform: translate(-50%, -50%);
 	}
+
+	&__contact {
+		width: 100%;
+		text-align: center;
+		margin-top: 100px;
+		color: $mainBlue;
+	}
+
+	&__btn {
+		border: 1px solid #111;
+		padding: 0.3125rem 2.5rem; 
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 1.2rem;
+		letter-spacing: 0.180em;
+
+		transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+
+		&:hover {
+			background-color: rgba($mainBlue, .5);
+			color: #111;
+		}
+	}
 	
 	&__copy {
+		clear: both;
 		margin: 20px 0;
 		text-align: center;
 	}

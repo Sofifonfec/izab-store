@@ -1,4 +1,6 @@
 .row {
+
+	padding: 50px 0;
 	
 	&__8 {
 		float: left;

@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 	<title>Concept Website</title>
 
-	<link href="https://fonts.googleapis.com/css?family=News+Cycle:400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Dosis:400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=News+Cycle:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400 500" rel="stylesheet" type="text/css">
 
-	<link rel="stylesheet" type="text/css" href="build/styles/styles.css">
+	<link rel="stylesheet" href="build/styles/styles.css">
 </head>
 <body>
 	<header>
 		<div class="header-menu">
-			<div class="wrapper wrapper__clearfixB">
+			<div class="wrapper">
 				<div class="header-menu__logo">
 					<img src="src/images/logo/logo.png" alt="logo">
 				</div>
+				
+				<div class="header-menu__icon">
+					<div class="header-menu__icon__middle"></div>
+				</div>	
+
 				<nav class="header-menu__nav">
 					<ul class="header-menu__list">
 						<li><a href="#" class="header-menu__item header-menu--no-content-b">Le concept</a></li>
@@ -26,53 +33,47 @@
 				</nav>
 			</div>
 		</div>
-		<div class="header-banner">
-			<div class="wrapper">
-				<div class="header-banner__img">
-					<img src="src/images/small-img.png" alt="Petite image géométrique">
-				</div>
-				<div class="header-banner__content">
-					<h1 class="header-banner__title">.Izab Concept Store.</h1>
-					<h2 class="header-banner__subtitle">Créations artisanales & artistiques</h2>
-				</div>
-			</div>
-		</div>
 	</header>
 
+	<div class="large-hero">
+		<div class="wrapper">
+			<div class="large-hero__img">
+				<img src="src/images/small-img.png" alt="Petite image géométrique">
+			</div>
+			<div class="large-hero__content">
+				<h1 class="large-hero__title"><span class="large-hero__title__deco">.</span>Izab Concept Store<span class="large-hero__title__deco">.</span></h1>
+				<h2 class="large-hero__subtitle">Créations artisanales & artistiques</h2>
+			</div>
+		</div>
+	</div>
+
 	<div class="categories">
-		<div class="wrapper categories__container">
-			<div class="categories__wrap">
+		<div class="wrapper wrapper--no-padding-until-small categories__container">
+			<div class="categories__wrap categories__wrap--top">
 				<div class="category">
 					<img src="src/images/categories/mode.png" alt="Photo mode" class="categories__photo">
 					<h3 class="categories__title">Mode</h3>
 				</div>
-			</div>
-			<div class="categories__wrap">
-				
 				<div class="category">
 					<img src="src/images/categories/accessoires.png" alt="Photo accessoires" class="categories__photo">
 					<h3 class="categories__title">Accessoires</h3>
 				</div>
 			</div>
-			<div class="categories__wrap">
+			<div class="categories__wrap categories__wrap--middle">
 				<div class="category">
 					<img src="src/images/categories/deco.png" alt="Photo Deco" class="categories__photo">
 					<h3 class="categories__title">Deco</h3>
-				</div>
-			</div>
-			<div class="categories__wrap">
+				</div>		
 				<div class="category">
 					<img src="src/images/categories/bijoux.png" alt="Photo Bijoux" class="categories__photo">
 					<h3 class="categories__title">Bijoux</h3>
 				</div>
 			</div>
-			<div class="categories__wrap">
+			<div class="categories__wrap categories__wrap--bottom">
 				<div class="category">
 					<img src="src/images/categories/art.png" alt="Photo Art" class="categories__photo">
 					<h3 class="categories__title">Art</h3>
 				</div>	
-			</div>
-			<div class="categories__wrap">	
 				<div class="category">
 					<img src="src/images/categories/cosmetiques.png" alt="Photo Cosmétiques" class="categories__photo">
 					<h3 class="categories__title">Cosmétiques</h3>
@@ -82,28 +83,40 @@
 	</div>
 
 	<section>
-		<div class="grid">
-			<div class="grid__content">
-				<h2 class="grid__title">Le concept &nbsp <span class="grid__title--deco">///</span></h2>
-				<p class="grid__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, nam perferendis sed aperiam optio non! Unde commodi iste, necessitatibus corporis voluptates nisi animi minus magni, eaque quibusdam a numquam id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis facilis nisi velit aperiam quod dignissimos veniam dolorum expedita, facere animi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem repudiandae at excepturi, omnis, est atque fuga consequuntur vitae ratione eos suscipit modi deleniti error odio sequi provident, ipsa odit commodi.</p>
+		<div class="site-section">
+			<div class="site-section__container">
+				<div class="site-section__box site-section__box--text site-section__box--box1">
+					<div class="site-section__txt-wrap">
+						<h2 class="site-section__title">Le concept &nbsp <span class="site-section__title--deco">///</span></h2>
+						<p class="site-section__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, nam perferendis sed aperiam optio non! Unde commodi iste, necessitatibus corporis voluptates nisi animi minus magni, eaque quibusdam a numquam id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis facilis nisi velit aperiam quod dignissimos veniam dolorum expedita, facere animi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem repudiandae at excepturi, omnis, est atque fuga consequuntur vitae ratione eos suscipit modi deleniti error odio sequi provident, ipsa odit commodi.</p>
+					</div>
+				</div>	
+				<div class="site-section__box site-section__box--photo site-section__box--box2">
+					<img src="src/images/section/concept.jpg" alt="Photo du concept store" class="site-section__image">
+				</div>	
 			</div>
-			<div class="grid__photo">
-				<img src="src/images/section/concept.jpg" alt="Photo du concept store" class="grid__image">
+			<div class="site-section__container">
+				<div class="site-section__box site-section__box--photo site-section__box--box3">
+					<img src="src/images/section/atelier.jpg" alt="Photo de l'atelier" class="site-section__image">
+				</div>
+				<div class="site-section__box site-section__box--text site-section__box--box4">
+					<div class="site-section__txt-wrap">
+						<h2 class="site-section__title">L'atelier &nbsp <span class="site-section__title--deco">///</span></h2>
+						<p class="site-section__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, nam perferendis sed aperiam optio non! Unde commodi iste, necessitatibus corporis voluptates nisi animi minus magni, eaque quibusdam a numquam id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, libero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quaerat, in doloremque explicabo maiores accusamus. Sapiente quas nostrum neque ullam, provident hic saepe magni perspiciatis.</p>
+					</div>	
+				</div>
 			</div>
-			<div class="grid__photo">
-				<img src="src/images/section/atelier.jpg" alt="Photo de l'atelier" class="grid__image">
-			</div>
-			<div class="grid__content">
-				<h2 class="grid__title">L'atelier &nbsp <span class="grid__title--deco">///</span></h2>
-				<p class="grid__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, nam perferendis sed aperiam optio non! Unde commodi iste, necessitatibus corporis voluptates nisi animi minus magni, eaque quibusdam a numquam id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, libero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quaerat, in doloremque explicabo maiores accusamus. Sapiente quas nostrum neque ullam, provident hic saepe magni perspiciatis.</p>
-			</div>
-			<div class="grid__content">
-				<h2 class="grid__title">Les créateurs &nbsp <span class="grid__title--deco">///</span></h2>
-				<p class="grid__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, nam perferendis sed aperiam optio non! Unde commodi iste, necessitatibus corporis voluptates nisi animi minus magni, eaque quibusdam a numquam id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quibusdam est voluptatum minus quae Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloribus adipisci dolore ea necessitatibus minus, eius, asperiores enim voluptatem perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, dolor! Saepe unde voluptate, accusamus sequi.</p>
-			</div>
-			<div class="grid__photo"> 
-				<img src="src/images/section/createurs.jpg" alt="Photo des créateurs" class="grid__image">
-			</div>
+			<div class="site-section__container">	
+				<div class="site-section__box site-section__box--text site-section__box--box5">
+					<div class="site-section__txt-wrap">
+						<h2 class="site-section__title">Les créateurs &nbsp <span class="site-section__title--deco">///</span></h2>
+						<p class="site-section__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, nam perferendis sed aperiam optio non! Unde commodi iste, necessitatibus corporis voluptates nisi animi minus magni, eaque quibusdam a numquam id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quibusdam est voluptatum minus quae Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloribus adipisci dolore ea necessitatibus minus, eius, asperiores enim voluptatem perferendis.</p>
+					</div>	
+				</div>
+				<div class="site-section__box site-section__box--photo site-section__box--box6"> 
+					<img src="src/images/section/createurs.jpg" alt="Photo des créateurs" class="site-section__image">
+				</div>
+			</div>	
 		</div>
 	</section>
 
@@ -115,11 +128,8 @@
 		</div>
 	</div>
 
-	<footer>
-		<div class="wrapper wrapper__clearfixB wrapper__clearfix footer">
-			<div class="footer__contact">
-				<a href="#" class="footer__btn">Contact</a>
-			</div>
+	<footer class="footer clearfix">
+		<div class="wrapper">
 			<div class="footer row">
 				<div class="footer__adresse row__8">
 					<h3 class="footer__title footer__title__map">Adresse</h3>
@@ -143,9 +153,12 @@
 							<img src="src/images/icons/twitter.png" alt="Logo twitter" class="footer__icons">
 						</a>
 					</div>
+					<div class="footer__contact">
+						<a href="#" class="footer__btn">Contact</a>
+					</div>
 				</div>
 			</div>
-			<div class="footer__copy wrapper__clearfixB">
+			<div class="footer__copy">
 				<p>Copyright &copy; 2018 Izàb Concept Store. All rights reserves</p>
 			</div>	
 		</div>

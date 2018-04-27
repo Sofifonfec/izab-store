@@ -1,31 +1,68 @@
 .categories {
-	height: 350px;
 	background-color: rgba($mainBlue, .8);
+
+	@mixin atLarge {
+		height: 350px;
+	}
 
 	&__container {
 		display: flex;
-		padding-top: 75px;
-		padding-bottom: 30px; 
+		justify-content: space-around;
+		flex-wrap: wrap;
+		padding-top: 50px;
+		padding-bottom: 45px; 
 		text-align: center;
+
+		@mixin atXSmall {
+			flex-wrap: nowrap;
+		}
+
+		@mixin atMedium {
+			padding-top: 75px;
+			padding-bottom: 70px;
+		}
 	}
 
 	&__wrap {
-		justify-content: space-between;
 		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
 	}
 
 	&__photo {
-		border-radius: 80px;
+		width: 110px;
+		height: 110px;
+		border-radius: 55px;
 		border: 2px solid rgba(255, 255, 255, .5); 
 		overflow: hidden;
-		width: 160px;
-		height: 160px; 
+
+		@mixin atXSmall {
+			width: 120px;
+			height: 120px;
+			border-radius: 60px;
+		}
+
+		@mixin atSmall {
+			width: 160px;
+			height: 160px; 
+			border-radius: 80px;
+		}
 	}
 
 	&__title {
 		text-transform: uppercase;
 		font-weight: 500;
+		font-size: .6rem;
 		letter-spacing: 2px;
 		color: #fff;
+
+		@mixin atXSmall {
+			font-size: .8rem;
+		}
+
+		@mixin atSmall {
+			font-size: 1rem;
+		}
 	}
 }

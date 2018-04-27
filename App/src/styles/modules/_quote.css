@@ -5,7 +5,6 @@
 	background: $mainBlue;
 	color: #fff;
 	font-family: 'Dosis', sans-serif;
-	@mixin clearfixB;
 
 	&__txt {
 		margin: auto;
@@ -38,7 +37,7 @@
 			top: -2px;
 			left: 50%;
 			margin-left: -25px;
-			background-color: rgba(#111, .5);
+			background-color: #BC9B00;
 		}
 	}
 

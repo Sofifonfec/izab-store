@@ -1,10 +1,107 @@
-.grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: 500px 500px 500px;
+.site-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+
+		@mixin atMedium {
+			flex-direction: row;
+			align-items: center;
+		}
+	}	
+
+	&__box {
+		width: 100%;
+
+		&--photo {
+			max-height: 300px;
+			overflow: hidden;
+			order: 1;
+		}
+
+		&--text {
+			order: 2;
+		}
+
+		@mixin atMedium {
+			width: 50%;
+
+			&--photo {
+				max-height: 400px;
+				max-width: 100%;
+				overflow: hidden;
+			}
+
+			&--box1 {
+				order: 1;
+			}
+
+			&--box5 {
+				order: 5;
+			}
+
+			&--box6 {
+				order: 6;
+			}
+		}
+	}
+
+	&__txt-wrap {
+		max-width: 800px;
+		min-height: 250px;
+		padding-left: 18px;
+		padding-right: 18px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+
+		@mixin atLarge {
+			max-width: 500px;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+		font-weight: 500;
+		letter-spacing: 0.125rem;
+		color: #111;
+
+		&--deco {
+			font-family: 'News Cycle', sans-serif;
+		}
+	}
+
+	&__para {
+		line-height: 1.9;
+		font-size: 0.9rem;
+		text-align: justify;
+	}
+
+
+	
+
+/*
+	@mixinatSmall {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 300px);
+	}
+
+	@mixin atMedium {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 500px);
+	}
 
 	&__content {
 		max-width: 500px;
+		padding-left: 18px;
+		padding-right: 18px;
 		margin: 30px auto;
 		text-align: justify;
 	}
@@ -12,7 +109,7 @@
 	&__title {
 		text-align: center;
 		text-transform: uppercase;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		font-weight: 500;
 		letter-spacing: 0.125rem;
 		color: $mainBlue;
@@ -24,11 +121,12 @@
 
 	&__para {
 		line-height: 1.9;
-		font-size: 1.1rem;
+		font-size: 1rem;
 	}
 
 	&__photo {
 		position: relative;
 		overflow: hidden;
 	}
+*/	
 }
