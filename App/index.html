@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<title>Concept Website</title>
@@ -41,7 +41,7 @@
 				<img src="src/images/small-img.png" alt="Petite image géométrique">
 			</div>
 			<div class="large-hero__content">
-				<h1 class="large-hero__title"><span class="large-hero__title__deco">.</span>Izab Concept Store<span class="large-hero__title__deco">.</span></h1>
+				<h1 class="large-hero__title"><span class="large-hero__title__deco">.</span>Izàb Concept Store<span class="large-hero__title__deco">.</span></h1>
 				<h2 class="large-hero__subtitle">Créations artisanales & artistiques</h2>
 			</div>
 		</div>
@@ -88,16 +88,26 @@
 				<div class="site-section__box site-section__box--text site-section__box--box1">
 					<div class="site-section__txt-wrap">
 						<h2 class="site-section__title">Le concept &nbsp <span class="site-section__title--deco">///</span></h2>
-						<p class="site-section__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, nam perferendis sed aperiam optio non! Unde commodi iste, necessitatibus corporis voluptates nisi animi minus magni, eaque quibusdam a numquam id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis facilis nisi velit aperiam quod dignissimos veniam dolorum expedita, facere animi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem repudiandae at excepturi, omnis, est atque fuga consequuntur vitae ratione eos suscipit modi deleniti error odio sequi provident, ipsa odit commodi.</p>
+						<p class="site-section__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, nam perferendis sed aperiam optio non! Unde commodi iste, necessitatibus corporis voluptates nisi animi minus magni, eaque quibusdam a numquam id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis facilis nisi velit aperiam quod dignissimos veniam dolorum expedita, facere animi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem repudiandae at excepturi, omnis, est atque fuga consequuntur vitae ratione eos suscipit modi deleniti error.</p>
 					</div>
 				</div>	
 				<div class="site-section__box site-section__box--photo site-section__box--box2">
-					<img src="src/images/section/concept.jpg" alt="Photo du concept store" class="site-section__image">
+					<picture>
+						<source srcset="src/images/section/concept-large-1088w.jpg" media="(min-width: 1200px)">
+						<source srcset="src/images/section/concept-medium-841w.jpg" media="(min-width: 900px)">
+						<source srcset="src/images/section/concept-small-full-983w.jpg" media="(min-width: 520px)">	
+						<img src="src/images/section/concept-small-555w.jpg" alt="Photo du concept store">
+					</picture>	
 				</div>	
 			</div>
 			<div class="site-section__container">
 				<div class="site-section__box site-section__box--photo site-section__box--box3">
-					<img src="src/images/section/atelier.jpg" alt="Photo de l'atelier" class="site-section__image">
+					<picture>
+						<source srcset="src/images/section/atelier-large-1076w.jpg" media="(min-width: 1200px)">
+						<source srcset="src/images/section/atelier-medium-841w.jpg" media="(min-width: 900px)">	
+						<source srcset="src/images/section/atelier-small-full-979w.jpg" media="(min-width: 520px)">	
+						<img src="src/images/section/atelier-small.jpg" alt="Photo de pinceaux">
+					</picture>	
 				</div>
 				<div class="site-section__box site-section__box--text site-section__box--box4">
 					<div class="site-section__txt-wrap">
@@ -113,32 +123,32 @@
 						<p class="site-section__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, nam perferendis sed aperiam optio non! Unde commodi iste, necessitatibus corporis voluptates nisi animi minus magni, eaque quibusdam a numquam id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quibusdam est voluptatum minus quae Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloribus adipisci dolore ea necessitatibus minus, eius, asperiores enim voluptatem perferendis.</p>
 					</div>	
 				</div>
-				<div class="site-section__box site-section__box--photo site-section__box--box6"> 
-					<img src="src/images/section/createurs.jpg" alt="Photo des créateurs" class="site-section__image">
-				</div>
+				<div class="site-section__box site-section__box--photo site-section__box--box6">
+					<picture class="site-section__box--photo site-section__box--photo--pic">
+						<source srcset="src/images/section/createurs-large-1077w.jpg" media="(min-width: 1200px)">
+						<source srcset="src/images/section/createurs-medium-857w.jpg" media="(min-width: 900px)">	
+						<source srcset="src/images/section/createurs-small-full-979w.jpg" media="(min-width: 520px)">	
+						<img src="src/images/section/createurs-small-563w.jpg" alt="Photo de pinceaux colorés">
+					</picture>
+				</div>		
 			</div>	
 		</div>
 	</section>
 
 	<div class="quote">
 		<div class="wrapper">
-			<img src="src/images/icons/quote66.png" alt="Ouvre les guillemets" class="quote__icon">
-			<blockquote class="quote__txt">Je vous regarde avancer entre l'incertitude et la douceur à l'aube d'un baiser ivre.</blockquote>
-			<cite class="quote__author">Mr Bla Bla</cite>
+			<blockquote class="quote__container">
+				<p class="quote__txt">What was it about us, as humans, that droves us to make apologies for beautiful things?</p>
+				<cite class="quote__author">Nenia Campbell</cite>
+			</blockquote>
 		</div>
 	</div>
 
 	<footer class="footer clearfix">
 		<div class="wrapper">
 			<div class="footer row">
-				<div class="footer__adresse row__8">
-					<h3 class="footer__title footer__title__map">Adresse</h3>
-					<div class="footer__map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1414.2736642693726!2d-0.5725581281214729!3d44.85115129529479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd552878495a2df7%3A0xda26de4290fd5152!2s52+Rue+Notre+Dame%2C+33000+Bordeaux!5e0!3m2!1sfr!2sfr!4v1524300883268" width="80%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-					</div>
-				</div>
 				<div class="footer__social row__4">
-					<h3 class="footer__title">Keep in touch</h3>
+					<h3 class="footer__title footer__title--extra-mb">Keep in touch</h3>
 					<div class="footer__icons-container">
 						<a href="#" title="Facebook" class="footer__links">
 							<img src="src/images/icons/facebook.png" alt="Logo facebook" class="footer__icons">
@@ -155,6 +165,12 @@
 					</div>
 					<div class="footer__contact">
 						<a href="#" class="footer__btn">Contact</a>
+					</div>
+				</div>
+				<div class="footer__adresse row__8">
+					<h3 class="footer__title">Adresse</h3>
+					<div class="footer__map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1414.2736642693726!2d-0.5725581281214729!3d44.85115129529479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd552878495a2df7%3A0xda26de4290fd5152!2s52+Rue+Notre+Dame%2C+33000+Bordeaux!5e0!3m2!1sfr!2sfr!4v1524300883268" width="80%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>

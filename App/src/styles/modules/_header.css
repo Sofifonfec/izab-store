@@ -4,22 +4,34 @@
 	position: absolute;
 	width: 100%;
 	z-index: 2;
-	background-color: rgba($lightGray, .7);
 	padding-bottom: 0;
 
 	@mixin atMedium {
 		position: fixed;
 		padding-bottom: 10px;
+		background-color: rgba($lightGray, .7);
 	}
 
 	&__logo {
-		text-align: center;
-		width: 100px;
-		margin-top: 10px;
+		width: 150px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%) scale(.9);
+		transition: transform .3s ease-out;
+		transform-origin: 50% 0;
+		padding: 15px 25px;
+		background-color: rgba($mainOrange, .5);
 
 		@mixin atMedium {
-			float: left;
+			left: auto;
 			width: 156px;
+			padding: 11px 25px;
+			transform: translateX(0);
+		}
+
+		@mixin atTiny {
+			width: 120px;
 		}
 	}
 
@@ -74,10 +86,10 @@
 	&__nav {
 		float: right;
 		padding-top: 0;
-		font-weight: 500;
-		letter-spacing: 0.120em;
-		color: #111;
 		font-family: 'Dosis', sans-serif;
+		font-weight: 500;
+		letter-spacing: 0.2em;
+		color: #111;
 		opacity: 0;
 		z-index: -10;
 
@@ -97,7 +109,7 @@
 
 		&:hover, &__item.is-active {
 		font-weight: 500;
-		color: $mainBlue;
+		color: $mainOrange;
 		}
 
 		&:before {

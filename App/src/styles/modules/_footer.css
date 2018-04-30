@@ -1,5 +1,6 @@
 footer {
 	background-color: rgba($lightGray, .7);
+	position: relative;
 }
 
 .footer {
@@ -8,16 +9,37 @@ footer {
 		text-transform: uppercase;
 		font-weight: 500;
 		text-align: center;
-		margin-bottom: 2.5rem;
+		margin-bottom: 1.5rem;
+		text-decoration: underline;
 
-		&__map {
-			margin-right: 20%;
+		@mixin atMedium {
+			margin-bottom: 3rem;
+			background-color: transparent;
+			text-decoration: none;
 		}
+
+		&--extra-mb {
+			margin-bottom: 2rem;
+
+			@mixin atMedium {
+				margin-bottom: 3.8rem;
+			}
+		}
+	}
+
+	&__map {
+		text-align: center;
 	}
 
 	&__icons-container {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
+		padding-right: 10px;
+
+		@mixin atMedium {
+			padding-right: 0;
+		}
 	}
 
 	&__icons-container a::before {
@@ -35,52 +57,89 @@ footer {
 	}
 
 	&__icons-container a:hover:before {
-			background-color: rgba($mainBlue, .5);
-		}
+			background-color: rgba($mainOrange, .5);
+	}
 
 	&__links {
-		width: 42px;
-		height: 42px;
+		width: 38px;
+		height: 38px;
 		display: inline-block;
 		position: relative;
 		margin-right: 40px;
 		text-align: center;
-		line-height: 20px;
+		line-height: 19px;
 
 		&:last-child {
 			margin-right: 0;
 		}
+
+		@mixin atXSmall {
+			width: 40px;
+			height: 40px;
+			line-height: 20px;
+		}
+
+		@mixin atTiny {
+			width: 30px;
+			height: 30px;
+			margin-right: 26px;
+			line-height: 12px;
+		}
 	}
 
 	&__icons {
-		width: 20px;
-		height: 20px;
+		width: 16px;
+		height: 16px;
 		position: relative;
 		top: 50%;
 		left: 50%;
 
 		transform: translate(-50%, -50%);
+
+		@mixin atXSmall {
+			width: 18px;
+			height: 18px;
+		}		
+
+		@mixin atTiny (max-width: 330px) {
+			width: 15px;
+			height: 15px;
+		}
 	}
 
 	&__contact {
 		width: 100%;
 		text-align: center;
-		margin-top: 100px;
-		color: $mainBlue;
+		margin-top: 50px;
+		color: $mainOrange;
+
+		@mixin atMedium {
+			margin-top: 100px;
+		}
 	}
 
 	&__btn {
 		border: 1px solid #111;
-		padding: 0.3125rem 2.5rem; 
+		padding: 5px 30px; 
 		text-transform: uppercase;
 		font-weight: 600;
-		font-size: 1.2rem;
+		font-size: 1rem;
 		letter-spacing: 0.180em;
 
 		transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
 
+		@mixin atMedium {
+			padding: 5px 40px;
+			font-size: 1.2rem;
+		}
+
+		@mixin atTiny {
+			padding: 3px 25px;
+			font-size: 0.9rem;
+		}
+
 		&:hover {
-			background-color: rgba($mainBlue, .5);
+			background-color: rgba($mainOrange, .5);
 			color: #111;
 		}
 	}
@@ -89,7 +148,16 @@ footer {
 		clear: both;
 		margin: 20px 0;
 		text-align: center;
+		font-size: 0.8rem;
+
+		@mixin atMedium {
+			font-size: 0.9rem;
+		}
 	}
-	
 }
 
+iframe {
+	@mixin atXLarge {
+			width: 90%;
+	}
+}

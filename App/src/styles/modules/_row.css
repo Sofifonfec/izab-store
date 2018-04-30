@@ -1,16 +1,36 @@
 .row {
 
-	padding: 50px 0;
+	padding: 20px 0;
+
+	@mixin atMedium {
+		padding: 50px 0;
+	}
 	
 	&__8 {
-		float: left;
-		width: 66.66%;
-		margin-bottom: 30px;
+		margin-bottom: 8px;
+
+		@mixin atMedium {
+			float: left;
+			width: 66.66%;
+			margin-bottom: 40px;
+		}
+
+		@mixin atXLarge {
+			padding-left: 30px;
+		}
 	}
 
 	&__4 {
-		float: left;
-		width: 33.33%;	
-		margin-bottom: 30px;
+		margin-bottom: 70px;
+
+		@mixin atMedium {
+			float: left;
+			width: 33.33%;
+			margin-bottom: 40px;
+		}
+
+		@mixin atXLarge {
+			padding-right: 30px;
+		}
 	}
 }
