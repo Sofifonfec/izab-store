@@ -17,6 +17,11 @@
 			padding-top: 75px;
 			padding-bottom: 70px;
 		}
+
+		@mixin atXLarge {
+			padding-top: 100px;
+			padding-bottom: 95px;
+		}
 	}
 
 	&__wrap {

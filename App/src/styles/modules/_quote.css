@@ -6,6 +6,11 @@
 	color: #fff;
 	font-family: 'Dosis', sans-serif;
 
+	@mixin atXLarge {
+		padding-top: 100px;
+		padding-bottom: 130px;
+	}
+
 	&__container {
 		display: block;
 		position: relative;
@@ -17,7 +22,7 @@
 		}
 
 		@mixin atXLarge {
-			max-width: 650px;
+			max-width: 650px;	
 		}
 	}
 

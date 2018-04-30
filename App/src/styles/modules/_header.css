@@ -4,11 +4,15 @@
 	position: absolute;
 	width: 100%;
 	z-index: 2;
-	padding-bottom: 0;
+	padding: 22px 0;
+	transition: background-color .3s ease-out;
+
+	&--is-expanded {
+		background-color: rgba($lightGray, .9);
+	}
 
 	@mixin atMedium {
 		position: fixed;
-		padding-bottom: 10px;
 		background-color: rgba($lightGray, .7);
 	}
 
@@ -26,7 +30,7 @@
 		@mixin atMedium {
 			left: auto;
 			width: 156px;
-			padding: 11px 25px;
+			padding: 16px 25px;
 			transform: translateX(0);
 		}
 
@@ -81,22 +85,48 @@
 		@mixin atMedium {
 			display: none;
 		}
+
+		&--close-x {
+			&::before {
+				transform: rotate(45deg) scale(1.25);
+			}
+
+			.header-menu__icon__middle {
+				opacity: 0;
+				transform: scaleX(0);
+			}
+
+			&::after {
+				transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+			}
+		}
 	} 
 
 	&__nav {
-		float: right;
-		padding-top: 0;
+		opacity: 0;
+		z-index: -10;
+		position: relative;
+		padding-top: 90px;
+		text-align: center;
 		font-family: 'Dosis', sans-serif;
 		font-weight: 500;
 		letter-spacing: 0.2em;
 		color: #111;
-		opacity: 0;
-		z-index: -10;
+		transform: scale(1.2);
+		transition: all .3s ease-out;
 
 		@mixin atMedium {
+			float: right;
 			opacity: 1;
 			z-index: 1;
-			padding-top: 33px;
+			padding-top: 0;
+			transform: scale(1);
+		}
+
+		&--is-visible {
+			opacity: 1;
+			z-index: 1;
+			transform: scale(1);  
 		}
 	}
 
@@ -105,25 +135,49 @@
 	}
 
 	&__item {
+		display: inline-block;
+		list-style: none;
+		padding: 0 15px 10px 0;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		letter-spacing: 1px;
 		transition-duration: .26s;
 
 		&:hover, &__item.is-active {
-		font-weight: 500;
-		color: $mainOrange;
+			font-weight: 500;
+			color: $mainOrange;
+		}
+
+		@mixin atMedium {
+			display: inline-block;
+			padding: 5px 0;
+			font-size: 1rem;
+			letter-spacing: 0.2em;
 		}
 
 		&:before {
-		content: "///";
-		color: #111;
-		display: inline-block;
-		padding: 0 1.875rem;
-		cursor: text;
-		font-family: 'News Cycle', sans-serif;
-		} 
+			@mixin atMedium {
+				content: "///";
+				color: #111;
+				display: inline-block;
+				padding: 0 1.875rem;
+				cursor: text;
+				font-family: 'News Cycle', sans-serif;
+			}
+		}
 	}
 
 	&--no-content-b:before {
 		display: none;
+	}
+
+	&__links {
+		padding: 5px 8px;
+		background-color: rgba(#fff, .8);
+
+		@mixin atMedium {
+			background-color: transparent;
+		}
 	}
 }
 

@@ -497,13 +497,6 @@ ul {
 	padding: 0;
 }
 
-li {
-	display: inline-block;
-	list-style: none;
-	text-transform: uppercase;
-	font-size: 1rem;
-}
-
 .clearfix::after {
 		content: "";
 		clear: both;
@@ -520,14 +513,19 @@ li {
 	position: absolute;
 	width: 100%;
 	z-index: 2;
-	padding-bottom: 0;
+	padding: 22px 0;
+	-webkit-transition: background-color .3s ease-out;
+	transition: background-color .3s ease-out;
 }
+
+.header-menu--is-expanded {
+		background-color: rgba(241,242,246, .9);
+	}
 
 @media (min-width: 900px) {
 
 .header-menu {
 		position: fixed;
-		padding-bottom: 10px;
 		background-color: rgba(241,242,246, .7)
 }
 	}
@@ -554,7 +552,7 @@ li {
 .header-menu__logo {
 			left: auto;
 			width: 156px;
-			padding: 11px 25px;
+			padding: 16px 25px;
 			-webkit-transform: translateX(0);
 			        transform: translateX(0)
 	}
@@ -628,25 +626,56 @@ li {
 	}
 	}
 
+.header-menu__icon--close-x::before {
+				-webkit-transform: rotate(45deg) scale(1.25);
+				        transform: rotate(45deg) scale(1.25);
+			}
+
+.header-menu__icon--close-x .header-menu__icon__middle {
+				opacity: 0;
+				-webkit-transform: scaleX(0);
+				        transform: scaleX(0);
+			}
+
+.header-menu__icon--close-x::after {
+				-webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+				        transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+			}
+
 .header-menu__nav {
-		float: right;
-		padding-top: 0;
+		opacity: 0;
+		z-index: -10;
+		position: relative;
+		padding-top: 90px;
+		text-align: center;
 		font-family: 'Dosis', sans-serif;
 		font-weight: 500;
 		letter-spacing: 0.2em;
 		color: #111;
-		opacity: 0;
-		z-index: -10;
+		-webkit-transform: scale(1.2);
+		        transform: scale(1.2);
+		-webkit-transition: all .3s ease-out;
+		transition: all .3s ease-out;
 	}
 
 @media (min-width: 900px) {
 
 .header-menu__nav {
+			float: right;
 			opacity: 1;
 			z-index: 1;
-			padding-top: 33px
+			padding-top: 0;
+			-webkit-transform: scale(1);
+			        transform: scale(1)
 	}
 	}
+
+.header-menu__nav--is-visible {
+			opacity: 1;
+			z-index: 1;
+			-webkit-transform: scale(1);
+			        transform: scale(1);  
+		}
 
 .header-menu__list::after {
 		content: "";
@@ -655,26 +684,57 @@ li {
 	}
 
 .header-menu__item {
+		display: inline-block;
+		list-style: none;
+		padding: 0 15px 10px 0;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		letter-spacing: 1px;
 		-webkit-transition-duration: .26s;
-		        transition-duration: .26s; 
+		        transition-duration: .26s;
 	}
 
 .header-menu__item:hover, .header-menu__item__item.is-active {
-		font-weight: 500;
-		color: #e17055;
+			font-weight: 500;
+			color: #e17055;
 		}
 
+@media (min-width: 900px) {
+
+.header-menu__item {
+			display: inline-block;
+			padding: 5px 0;
+			font-size: 1rem;
+			letter-spacing: 0.2em
+	}
+	}
+
+@media (min-width: 900px) {
+
 .header-menu__item:before {
-		content: "///";
-		color: #111;
-		display: inline-block;
-		padding: 0 1.875rem;
-		cursor: text;
-		font-family: 'News Cycle', sans-serif;
+				content: "///";
+				color: #111;
+				display: inline-block;
+				padding: 0 1.875rem;
+				cursor: text;
+				font-family: 'News Cycle', sans-serif
 		}
+	}
 
 .header-menu--no-content-b:before {
 		display: none;
+	}
+
+.header-menu__links {
+		padding: 5px 8px;
+		background-color: rgba(255,255,255, .8);
+	}
+
+@media (min-width: 900px) {
+
+.header-menu__links {
+			background-color: transparent
+	}
 	}
 
 .large-hero {
@@ -818,6 +878,31 @@ li {
 	        transform: scale(1);
 }
 
+.transition-delay--1 {
+		-webkit-transition-delay: 0.15s;
+		        transition-delay: 0.15s;
+	}
+
+.transition-delay--2 {
+		-webkit-transition-delay: 0.30s;
+		        transition-delay: 0.30s;
+	}
+
+.transition-delay--3 {
+		-webkit-transition-delay: 0.45s;
+		        transition-delay: 0.45s;
+	}
+
+.transition-delay--4 {
+		-webkit-transition-delay: 0.55s;
+		        transition-delay: 0.55s;
+	}
+
+.transition-delay--5 {
+		-webkit-transition-delay: 0.65s;
+		        transition-delay: 0.65s;
+	}
+
 .categories {
 	background-color: rgba(225,112,85, .75);
 }
@@ -848,6 +933,14 @@ li {
 .categories__container {
 			padding-top: 75px;
 			padding-bottom: 70px
+	}
+	}
+
+@media (min-width: 1390px) {
+
+.categories__container {
+			padding-top: 100px;
+			padding-bottom: 95px
 	}
 	}
 
@@ -1168,6 +1261,14 @@ li {
 	color: #fff;
 	font-family: 'Dosis', sans-serif;
 }
+
+@media (min-width: 1390px) {
+
+.quote {
+		padding-top: 100px;
+		padding-bottom: 130px
+}
+	}
 
 .quote__container {
 		display: block;
