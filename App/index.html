@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<title>Concept Website</title>
 
@@ -25,9 +25,9 @@
 
 			<nav class="header-menu__nav">
 				<ul class="header-menu__list">
-					<li class="header-menu__item header-menu--no-content-b"><a href="#" class="header-menu__links">Le concept</a></li>
-					<li class="header-menu__item"><a href="#" class="header-menu__links">L'atelier</a></li>
-					<li class="header-menu__item"><a href="#" class="header-menu__links">Les créateurs</a></li>
+					<li class="header-menu__item header-menu--no-content-b"><a href="#concept" class="header-menu__links" id="concept-link">Le concept</a></li>
+					<li class="header-menu__item"><a href="#atelier" class="header-menu__links" id="atelier-link">L'atelier</a></li>
+					<li class="header-menu__item"><a href="#createurs" class="header-menu__links" id="createurs-link">Les créateurs</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -82,7 +82,7 @@
 
 	<section>
 		<div class="site-section">
-			<div class="site-section__container">
+			<div id="concept" class="site-section__container" data-matching-link="#concept-link">
 				<div class="site-section__box site-section__box--text site-section__box--box1">
 					<div class="site-section__txt-wrap">
 						<h2 class="site-section__title">Le concept &nbsp <span class="site-section__title--deco">///</span></h2>
@@ -98,7 +98,7 @@
 					</picture>	
 				</div>	
 			</div>
-			<div class="site-section__container">
+			<div id="atelier" class="site-section__container" data-matching-link="#atelier-link">
 				<div class="site-section__box site-section__box--photo site-section__box--box3">
 					<picture>
 						<source srcset="src/images/section/atelier-large-1076w.jpg" media="(min-width: 1200px)">
@@ -114,7 +114,7 @@
 					</div>	
 				</div>
 			</div>
-			<div class="site-section__container">	
+			<div id="createurs" class="site-section__container" data-matching-link="#createurs-link">	
 				<div class="site-section__box site-section__box--text site-section__box--box5">
 					<div class="site-section__txt-wrap">
 						<h2 class="site-section__title">Les créateurs &nbsp <span class="site-section__title--deco">///</span></h2>
@@ -162,7 +162,7 @@
 						</a>
 					</div>
 					<div class="footer__contact">
-						<a href="#" class="footer__btn">Contact</a>
+						<a href="#" class="footer__btn open-modal">Contact</a>
 					</div>
 				</div>
 				<div class="footer__adresse row__8">
@@ -177,6 +177,19 @@
 			</div>	
 		</div>
 	</footer>
+
+	<div class="modal">
+		<h2 class="modal__title">Nous contacter</h2>
+		<p class="modal__para"><strong>Email :</strong> contact@izab.com</p>
+		<p class="modal__para"><strong>Téléphone :</strong> +33 (0) 6 16 09 09 19</p>
+		<h4 class="modal__subtitle">Horaires d'ouverture</h5>
+		<ul class="modal__list">
+			<li class="modal__list-item">Lundi au vendredi de 10h à 20h</li>
+			<li class="modal__list-item">Samedi de 10h à 19h</li>
+			<li class="modal__list-item">Fermé le dimanche</li>
+		</ul>
+		<div class="modal__close">X</div>
+	</div>
 	
 	<script src="build/scripts/App.js"></script>
 </body>

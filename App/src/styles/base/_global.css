@@ -1,17 +1,16 @@
-html, body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
 }
 
 body {
 	font-family: 'News Cycle', sans-serif;
 	color: #111;
-}
-
-* {
-	box-sizing: border-box;
 }
 
 p {

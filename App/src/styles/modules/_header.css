@@ -13,7 +13,11 @@
 
 	@mixin atMedium {
 		position: fixed;
-		background-color: rgba($lightGray, .7);
+		background-color: rgba($lightGray, .5);
+
+		&--dark {
+			background-color: rgba($lightGray, .9);
+		}
 	}
 
 	&__logo {
@@ -29,9 +33,13 @@
 
 		@mixin atMedium {
 			left: auto;
-			width: 156px;
-			padding: 16px 25px;
+			width: 170px;
+			padding: 20px 25px;
 			transform: translateX(0);
+
+			.header-menu--dark & {
+				transform: scale(.86);
+			}
 		}
 
 		@mixin atTiny {
@@ -135,9 +143,10 @@
 	}
 
 	&__item {
-		display: inline-block;
+		display: block;
+		margin-bottom: 15px;
+		padding-bottom: 10px;
 		list-style: none;
-		padding: 0 15px 10px 0;
 		text-transform: uppercase;
 		font-size: 0.8rem;
 		letter-spacing: 1px;
@@ -153,6 +162,7 @@
 			padding: 5px 0;
 			font-size: 1rem;
 			letter-spacing: 0.2em;
+			margin-bottom: 0;
 		}
 
 		&:before {
@@ -172,11 +182,21 @@
 	}
 
 	&__links {
-		padding: 5px 8px;
+		padding: 6px 8px;
+		display: block;
+		width: 150px;
+		margin: auto;
 		background-color: rgba(#fff, .8);
 
 		@mixin atMedium {
 			background-color: transparent;
+			display: inline;
+			padding: 0;
+			width: auto;
+
+			&.is-current-link {
+				color: $mainOrange;
+			}
 		}
 	}
 }
