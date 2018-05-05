@@ -14,6 +14,7 @@
 	transition: all .3s ease-out;
 	box-sizing: border-box;
 	max-width: 100%;
+	overflow: hidden;
 
 	&--is-visible {
 		opacity: 1;
@@ -21,74 +22,83 @@
 		transform: scale(1);
 	}
 
+	&__container {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__contact {
+		flex: 1;
+		position: relative;
+		margin-bottom: 20px;
+		color: $mainOrange;
+	}
+
+	&__opening {
+		flex: 1;
+		position: relative;
+		background-color: rgba($terra, .8);
+		color: $lightGray;
+		padding-top: 20px;
+	}
+
+	&__txt-wrap {
+		position: absolute;
+		width: 90%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 
 	&__title {
-		margin-top: 150px;
 		margin-bottom: 30px;
+		margin-top: 0;
+		padding-top: 30px;
 		font-family: 'Dosis', sans-serif;
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		font-weight: 400;
 		line-height: 2rem;
 		letter-spacing: 0.3em;
 		text-transform: uppercase;
-
+		
 		@mixin atXSmall {
-			font-size: 1.7rem;
+			font-size: 1.5rem;
+		}
+
+		@mixin atSmall {
+			font-size: 1.6rem;
 		}
 
 		@mixin atMedium {
+			font-size: 1.8rem;
+		}
+
+		@mixin atXLarge {
 			font-size: 2rem;
-			margin-top: 200px;
 		}
 
 		@mixin atTiny {
-			font-size: 1.3rem;
+			font-size: 1.1rem;
 		}
 	}
 
 	&__para {
-		font-size: 1.1rem;
+		font-size: .9rem;
 		letter-spacing: 1px;
-	}
 
-	&__subtitle {
-		padding-top: 10px;
-		letter-spacing: 1px;
-		text-underline-position: under;
-		text-decoration: underline;
-		font-size: 1.2rem;
-	}
-
-	&__list {
-		font-size: 1.1rem;
-		padding-top: 5px;
-
-		@mixin atMedium {
-			padding-top: 10px;
+		@mixin atSmall {
+			font-size: 1rem;
 		}
-	}
 
-	&__list-item {
-		padding-bottom: 5px;
-
-		@mixin atMedium {
-			display: inline-block;
-			padding-bottom: 0;
-		
-			&:before {
-				content: "///";
-				letter-spacing: 3px;
-				color: #111;
-				display: inline-block;
-				padding: 0 1.875rem;
-				font-family: 'News Cycle', sans-serif;
-			}
-
-			&:first-child:before {
-				display: none
-			}
+		@mixin atXLarge {
+			font-size: 1.1rem;
 		}
-	}
+
+		&--dark {
+			color: rgba(#2f3640, .8);
+		}
+	}	
 
 	&__close {
 		position: absolute;

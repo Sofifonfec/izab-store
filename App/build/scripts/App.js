@@ -11378,6 +11378,7 @@ var StickyHeader = function () {
 	function StickyHeader() {
 		_classCallCheck(this, StickyHeader);
 
+		this.lazyImages = (0, _jquery2.default)('.lazyload');
 		this.headerMenu = (0, _jquery2.default)('.header-menu');
 		this.headerTriggerElement = (0, _jquery2.default)(".large-hero__img");
 		this.createHeaderWaypoint();
@@ -11387,9 +11388,17 @@ var StickyHeader = function () {
 		this.categoriesTriggerElement = (0, _jquery2.default)(".categories");
 		this.removeSiteSectionWaypoint();
 		this.addSmoothScrolling();
+		this.refreshWaypoints();
 	}
 
 	_createClass(StickyHeader, [{
+		key: 'refreshWaypoints',
+		value: function refreshWaypoints() {
+			this.lazyImages.on('load', function () {
+				Waypoint.refreshAll();
+			});
+		}
+	}, {
 		key: 'addSmoothScrolling',
 		value: function addSmoothScrolling() {
 			this.headerLinks.smoothScroll();
@@ -11406,7 +11415,8 @@ var StickyHeader = function () {
 					} else {
 						that.headerMenu.removeClass("header-menu--dark");
 					}
-				}
+				},
+				offset: "7%"
 			});
 		}
 	}, {

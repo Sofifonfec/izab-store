@@ -1,0 +1,10 @@
+/* Test */
+
+{{#shapes}}
+	.icon--{{base}} {
+		width: {{width.outer}}px;
+		height: {{height.outer}}px;
+		background-image: url('/build/sprite/css/{{{sprite}}}');
+		background-position: {{position.relative.xy}};
+	}
+{{/shapes}}

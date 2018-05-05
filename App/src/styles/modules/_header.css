@@ -1,11 +1,11 @@
 
-
 .header-menu {
 	position: absolute;
 	width: 100%;
 	z-index: 2;
 	padding: 22px 0;
 	transition: background-color .3s ease-out;
+	overflow-x: hidden;
 
 	&--is-expanded {
 		background-color: rgba($lightGray, .9);
@@ -13,32 +13,46 @@
 
 	@mixin atMedium {
 		position: fixed;
-		background-color: rgba($lightGray, .5);
+		overflow-x: visible;
+		padding: 15px 0;
 
 		&--dark {
 			background-color: rgba($lightGray, .9);
 		}
 	}
 
+	@mixin atXLarge {
+		padding: 20px 0;
+	}	
+
 	&__logo {
 		width: 150px;
 		position: absolute;
 		top: 0;
 		left: 50%;
+		padding: 15px 25px;
+		background-color: rgba($charcol, .2);
 		transform: translateX(-50%) scale(.9);
 		transition: transform .3s ease-out;
 		transform-origin: 50% 0;
-		padding: 15px 25px;
-		background-color: rgba($mainOrange, .5);
 
 		@mixin atMedium {
 			left: auto;
-			width: 170px;
-			padding: 20px 25px;
+			width: 120px;
+			padding: 15px 20px;
 			transform: translateX(0);
 
 			.header-menu--dark & {
-				transform: scale(.86);
+				transform: scale(.80);
+			}
+		}
+
+		@mixin atXLarge {
+			width: 170px;
+			padding: 20px 25px;
+
+			.header-menu--dark & {
+				transform: scale(.82);
 			}
 		}
 
@@ -152,17 +166,24 @@
 		letter-spacing: 1px;
 		transition-duration: .26s;
 
-		&:hover, &__item.is-active {
-			font-weight: 500;
-			color: $mainOrange;
+		@mixin hover {
+			&:hover {
+				font-weight: 500;
+				color: $mainOrange;
+			}
 		}
 
 		@mixin atMedium {
 			display: inline-block;
-			padding: 5px 0;
-			font-size: 1rem;
+			padding: 0 0;
+			font-size: 0.9rem;
 			letter-spacing: 0.2em;
 			margin-bottom: 0;
+		}
+
+		@mixin atXLarge {
+			padding: 5px 0;
+			font-size: 1rem;
 		}
 
 		&:before {

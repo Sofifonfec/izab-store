@@ -1,10 +1,15 @@
 .large-hero {
 	position: relative;
-	background: url("../../src/images/header.jpg") top center fixed;
+	background: url("../../src/images/header-small.jpg") no-repeat top center fixed;
 	background-size: cover;
 	height: 100vh;
 	max-width: 100%;
 	box-sizing: border-box;
+
+	@mixin atMedium {
+		background: url("../../src/images/header-test4.jpg") no-repeat top center fixed;
+		background-size: cover;
+	}
 
 	&__img {
 		width: 140px;
@@ -47,7 +52,7 @@
 
 		@mixin atXSmall {
 			margin-top: 40px;
-			margin-bottom: 40px;
+			margin-bottom: 42px;
 		}
 
 		&__deco {
@@ -63,6 +68,8 @@
 		font-size: 1.5rem;
 		font-weight: 300;
 		letter-spacing: 0.14em;
+		font-family: 'Dosis', sans-serif;
+		line-height: 1.4rem;
 
 		@mixin atSmall {
 			font-size: 1.875rem;

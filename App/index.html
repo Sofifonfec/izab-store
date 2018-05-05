@@ -7,10 +7,11 @@
 	<title>Concept Website</title>
 
 	<link href="https://fonts.googleapis.com/css?family=News+Cycle:400,700" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Dosis:400 500" rel="stylesheet" type="text/css">
 
 	<link rel="stylesheet" href="build/styles/styles.css">
+	<script src="build/scripts/Vendor.js"></script>
+
 </head>
 <body>
 	<header class="header-menu">
@@ -46,38 +47,41 @@
 	</div>
 
 	<div class="categories">
-		<div class="wrapper wrapper--no-padding-until-small categories__container">
-			<div class="categories__wrap categories__wrap--top">
-				<div class="category">
-					<img src="src/images/categories/mode.png" alt="Photo mode" class="categories__photo">
-					<h3 class="categories__title">Mode</h3>
+		<div class="wrapper wrapper--no-padding-until-small">
+			<h2 class="categories__main-title">- Créations -</h2>
+			<div class="categories__container">
+				<div class="categories__wrap categories__wrap--top">
+					<div class="category">
+						<img src="src/images/categories/mode.png" alt="Photo mode" class="categories__photo">
+						<h3 class="categories__title">Mode</h3>
+					</div>
+					<div class="category transition-delay transition-delay--1">
+						<img src="src/images/categories/accessoires.png" alt="Photo accessoires" class="categories__photo">
+						<h3 class="categories__title">Accessoires</h3>
+					</div>
 				</div>
-				<div class="category transition-delay transition-delay--1">
-					<img src="src/images/categories/accessoires.png" alt="Photo accessoires" class="categories__photo">
-					<h3 class="categories__title">Accessoires</h3>
+				<div class="categories__wrap categories__wrap--middle">
+					<div class="category transition-delay transition-delay--2">
+						<img src="src/images/categories/deco.png" alt="Photo Deco" class="categories__photo">
+						<h3 class="categories__title">Deco</h3>
+					</div>		
+					<div class="category transition-delay transition-delay--3">
+						<img src="src/images/categories/bijoux.png" alt="Photo Bijoux" class="categories__photo">
+						<h3 class="categories__title">Bijoux</h3>
+					</div>
 				</div>
-			</div>
-			<div class="categories__wrap categories__wrap--middle">
-				<div class="category transition-delay transition-delay--2">
-					<img src="src/images/categories/deco.png" alt="Photo Deco" class="categories__photo">
-					<h3 class="categories__title">Deco</h3>
-				</div>		
-				<div class="category transition-delay transition-delay--3">
-					<img src="src/images/categories/bijoux.png" alt="Photo Bijoux" class="categories__photo">
-					<h3 class="categories__title">Bijoux</h3>
-				</div>
-			</div>
-			<div class="categories__wrap categories__wrap--bottom">
-				<div class="category transition-delay transition-delay--4">
-					<img src="src/images/categories/art.png" alt="Photo Art" class="categories__photo">
-					<h3 class="categories__title">Art</h3>
+				<div class="categories__wrap categories__wrap--bottom">
+					<div class="category transition-delay transition-delay--4">
+						<img src="src/images/categories/art.png" alt="Photo Art" class="categories__photo">
+						<h3 class="categories__title">Art</h3>
+					</div>	
+					<div class="category transition-delay transition-delay--5">
+						<img src="src/images/categories/cosmetiques.png" alt="Photo Cosmétiques" class="categories__photo">
+						<h3 class="categories__title">Cosmétiques</h3>
+					</div>	
 				</div>	
-				<div class="category transition-delay transition-delay--5">
-					<img src="src/images/categories/cosmetiques.png" alt="Photo Cosmétiques" class="categories__photo">
-					<h3 class="categories__title">Cosmétiques</h3>
-				</div>	
-			</div>	
-		</div>
+			</div>
+		</div>	
 	</div>
 
 	<section>
@@ -91,20 +95,20 @@
 				</div>	
 				<div class="site-section__box site-section__box--photo site-section__box--box2">
 					<picture>
-						<source srcset="src/images/section/concept-large-1088w.jpg" media="(min-width: 1200px)">
-						<source srcset="src/images/section/concept-medium-841w.jpg" media="(min-width: 900px)">
-						<source srcset="src/images/section/concept-small-full-983w.jpg" media="(min-width: 520px)">	
-						<img src="src/images/section/concept-small-555w.jpg" alt="Photo d'une pelote de laine'">
+						<source data-srcset="src/images/section/concept-large-1088w.jpg" media="(min-width: 1200px)">
+						<source data-srcset="src/images/section/concept-medium-841w.jpg" media="(min-width: 900px)">
+						<source data-srcset="src/images/section/concept-small-full-983w.jpg" media="(min-width: 520px)">	
+						<img class="lazyload" data-src="src/images/section/concept-small-555w.jpg" alt="Photo d'une pelote de laine'">
 					</picture>	
 				</div>	
 			</div>
 			<div id="atelier" class="site-section__container" data-matching-link="#atelier-link">
 				<div class="site-section__box site-section__box--photo site-section__box--box3">
 					<picture>
-						<source srcset="src/images/section/atelier-large-1076w.jpg" media="(min-width: 1200px)">
-						<source srcset="src/images/section/atelier-medium-841w.jpg" media="(min-width: 900px)">	
-						<source srcset="src/images/section/atelier-small-full-979w.jpg" media="(min-width: 520px)">	
-						<img src="src/images/section/atelier-small.jpg" alt="Photo crayons et fil à tisser">
+						<source data-srcset="src/images/section/atelier-large-1076w.jpg" media="(min-width: 1200px)">
+						<source data-srcset="src/images/section/atelier-medium-841w.jpg" media="(min-width: 900px)">	
+						<source data-srcset="src/images/section/atelier-small-full-979w.jpg" media="(min-width: 520px)">	
+						<img class="lazyload" data-src="src/images/section/atelier-small.jpg" alt="Photo crayons et fil à tisser">
 					</picture>	
 				</div>
 				<div class="site-section__box site-section__box--text site-section__box--box4">
@@ -123,10 +127,10 @@
 				</div>
 				<div class="site-section__box site-section__box--photo site-section__box--box6">
 					<picture class="site-section__box--photo site-section__box--photo--pic">
-						<source srcset="src/images/section/createurs-large-1077w.jpg" media="(min-width: 1200px)">
-						<source srcset="src/images/section/createurs-medium-857w.jpg" media="(min-width: 900px)">	
-						<source srcset="src/images/section/createurs-small-full-979w.jpg" media="(min-width: 520px)">	
-						<img src="src/images/section/createurs-small-563w.jpg" alt="Photo de pinceaux colorés">
+						<source data-srcset="src/images/section/createurs-large-1077w.jpg" media="(min-width: 1200px)">
+						<source data-srcset="src/images/section/createurs-medium-857w.jpg" media="(min-width: 900px)">	
+						<source data-srcset="src/images/section/createurs-small-full-979w.jpg" media="(min-width: 520px)">	
+						<img class="lazyload" data-src="src/images/section/createurs-small-563w.jpg" alt="Photo de pinceaux colorés">
 					</picture>
 				</div>		
 			</div>	
@@ -136,8 +140,8 @@
 	<div class="quote">
 		<div class="wrapper">
 			<blockquote class="quote__container">
-				<p class="quote__txt">What was it about us, as humans, that droves us to make apologies for beautiful things?</p>
-				<cite class="quote__author">Nenia Campbell</cite>
+				<p class="quote__txt">Vous voyez des choses et vous dites: pourquoi? Mais moi je rêve de choses qui n'ont jamais existé et je dis: pourquoi pas?</p>
+				<cite class="quote__author">-George Bernard Shaw</cite>
 			</blockquote>
 		</div>
 	</div>
@@ -146,19 +150,19 @@
 		<div class="wrapper">
 			<div class="footer row">
 				<div class="footer__social row__4">
-					<h3 class="footer__title footer__title--extra-mb">Keep in touch</h3>
+					<h3 class="footer__title footer__title--extra-mb">- Keep in touch -</h3>
 					<div class="footer__icons-container">
 						<a href="#" title="Facebook" class="footer__links">
-							<img src="src/images/icons/facebook.png" alt="Logo facebook" class="footer__icons">
+							<img src="src/images/icons/facebook.svg" alt="Logo facebook" class="footer__icon">
 						</a>
 						<a href="#" title="Instagram" class="footer__links">
-							<img src="src/images/icons/instagram.png" alt="Logo instagram" class="footer__icons">
+							<img src="src/images/icons/instagram.svg" alt="Logo instagram" class="footer__icon">
 						</a>
 						<a href="#" title="Pinterest" class="footer__links">
-							<img src="src/images/icons/pinterest.png" alt="Logo pinterest" class="footer__icons">
+							<img src="src/images/icons/pinterest.svg" alt="Logo pinterest" class="footer__icon">
 						</a>
 						<a href="#" title="Twitter" class="footer__links">
-							<img src="src/images/icons/twitter.png" alt="Logo twitter" class="footer__icons">
+							<img src="src/images/icons/twitter.svg" alt="Logo twitter" class="footer__icon">
 						</a>
 					</div>
 					<div class="footer__contact">
@@ -166,7 +170,7 @@
 					</div>
 				</div>
 				<div class="footer__adresse row__8">
-					<h3 class="footer__title">Adresse</h3>
+					<h3 class="footer__title">- Adresse -</h3>
 					<div class="footer__map">
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1414.2736642693726!2d-0.5725581281214729!3d44.85115129529479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd552878495a2df7%3A0xda26de4290fd5152!2s52+Rue+Notre+Dame%2C+33000+Bordeaux!5e0!3m2!1sfr!2sfr!4v1524300883268" width="80%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
@@ -179,15 +183,24 @@
 	</footer>
 
 	<div class="modal">
-		<h2 class="modal__title">Nous contacter</h2>
-		<p class="modal__para"><strong>Email :</strong> contact@izab.com</p>
-		<p class="modal__para"><strong>Téléphone :</strong> +33 (0) 6 16 09 09 19</p>
-		<h4 class="modal__subtitle">Horaires d'ouverture</h5>
-		<ul class="modal__list">
-			<li class="modal__list-item">Lundi au vendredi de 10h à 20h</li>
-			<li class="modal__list-item">Samedi de 10h à 19h</li>
-			<li class="modal__list-item">Fermé le dimanche</li>
-		</ul>
+		<div class="modal__container">
+			<div class="modal__contact">
+				<div class="modal__txt-wrap">
+					<h2 class="modal__title">Nous contacter</h2>
+					<p class="modal__para"><strong>Email :</strong> contact@izab.com</p>
+					<p class="modal__para"><strong>Téléphone :</strong> +33 (0) 6 16 09 09 19</p>
+				</div>
+			</div>	
+			<div class="modal__opening">
+				<div class="modal__txt-wrap">
+					<h2 class="modal__title">Horaires d'ouverture</h2>
+					<p class="modal__para modal__para--dark"><strong>Lundi au jeudi :</strong> de 10h à 19h</p>
+					<p class="modal__para modal__para--dark"><strong>Vendredi & samedi :</strong> de 10h à 20h</p>
+					<p class="modal__para modal__para--dark"><strong>Dimanche :</strong> fermé</p>
+				</div>
+			</div>	
+		</div>
+			
 		<div class="modal__close">X</div>
 	</div>
 	

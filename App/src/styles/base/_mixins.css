@@ -29,7 +29,7 @@
 }
 
 @define-mixin atXLarge {
-	@media (min-width: 1390px) {
+	@media (min-width: 1450px) {
 		@mixin-content;
 	}
 }
@@ -48,4 +48,10 @@
 		clear: both;
 		display: table;
 	}
+}
+
+@define-mixin hover {
+	@media (hover: hover) {
+		@mixin-content;
+	}	
 }

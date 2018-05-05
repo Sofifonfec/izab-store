@@ -2,7 +2,7 @@
 	width: 100%;
 	padding-top: 50px;
 	padding-bottom: 85px;
-	background: rgba($mainOrange, 0.8);
+	background: rgba($terra, .7);
 	color: #fff;
 	font-family: 'Dosis', sans-serif;
 
@@ -42,8 +42,8 @@
 			padding-top: 0;
 			font-size: 1.7rem;
 		}
-		
-		@mixin atMedium {
+
+		@mixin atXLarge {
 			font-size: 2rem;
 		}
 
@@ -54,7 +54,7 @@
 			left: 50%;
 			margin-top: 1rem;
 			transform: translateX(-50%);
-			font-family: Old Standard;
+			font-family: Robotto;
 			font-size: 6rem;
 			font-style: italic;
 
@@ -64,7 +64,7 @@
 				transform: translateX(0%);
 				margin-top: 0;
 				font-size: 8rem;
-	
+				font-style: normal;
 			}
 
 			@mixin atTiny {

@@ -1,11 +1,34 @@
 .categories {
-	background-color: rgba($mainOrange, .75);
+	background-color: rgba($terra, .7);
+
+	&__main-title {
+		margin: 0;
+		padding-top: 50px;
+		padding-bottom: 0;
+		font-family: 'Dosis', sans-serif;
+		letter-spacing: 0.2em;
+		color: #fff;
+		font-weight: 500;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.3rem;
+
+		@mixin atMedium {
+			padding-top: 70px;
+			font-size: 1.5rem;
+		}
+
+		@mixin atXLarge {
+			padding-top: 90px;
+			font-size: 2rem;
+		}
+	}
 
 	&__container {
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
-		padding-top: 50px;
+		padding-top: 40px;
 		padding-bottom: 45px; 
 		text-align: center;
 
@@ -14,12 +37,12 @@
 		}
 
 		@mixin atMedium {
-			padding-top: 75px;
+			padding-top: 50px;
 			padding-bottom: 70px;
 		}
 
 		@mixin atXLarge {
-			padding-top: 100px;
+			padding-top: 60px;
 			padding-bottom: 95px;
 		}
 	}
@@ -45,9 +68,25 @@
 		}
 
 		@mixin atSmall {
+			width: 145px;
+			height: 145px; 
+			border-radius: 72.5px;
+			transform: scale(1);
+			transition: 0.5s;
+		}
+
+		@mixin atXLarge {
 			width: 160px;
 			height: 160px; 
 			border-radius: 80px;
+			transform: scale(1);
+			transition: 0.5s;
+		}
+
+		@mixin hover {
+			&:hover {
+				transform: scale(1.1);
+			}
 		}
 	}
 
@@ -63,6 +102,10 @@
 		}
 
 		@mixin atSmall {
+			font-size: 0.9rem;
+		}
+
+		@mixin atXLarge {
 			font-size: 1rem;
 		}
 	}
