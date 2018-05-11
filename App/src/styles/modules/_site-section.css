@@ -69,10 +69,10 @@
 
 		@mixin atMedium {
 			max-width: 92%;
+			padding: 0;
 		}
 
 		@mixin atLarge {
-			padding: 0;
 			max-width: 80%;
 		}
 
@@ -119,7 +119,6 @@
 
 		@mixin atLarge {
 			line-height: 1.8;
-			font-size: 0.9rem;
 		}
 
 		@mixin atXLarge {
@@ -129,6 +128,34 @@
 
 		@mixin atTiny {
 			font-size: 0.8rem;
+		}
+	}
+
+	&__btn-cont {
+		text-align: left;
+		padding: 5px 0 25px 0;
+
+		@mixin atSmall {
+			padding-bottom: 40px;
+		}
+
+		@mixin atMedium {
+			padding-bottom: 10px;
+		}
+
+		@mixin hover {
+			&:hover {
+				transform: scale(.99);
+			}
+		}
+	}
+
+	&__btn {
+		padding: .1875rem .5rem;
+		font-size: .9rem;
+
+		@media all and (min-width: 950px) {
+			font-size: 1rem;
 		}
 	}
 }

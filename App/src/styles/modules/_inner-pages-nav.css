@@ -1,0 +1,82 @@
+.inner-pages-nav {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+
+	&__logo {
+		width: 150px;
+		position: relative;
+		float: left;
+		top: 0;
+		padding: 15px 25px;
+
+		@mixin atMedium {
+			left: 50%;
+			padding: 10px 10px;
+			transform: translateX(-50%);
+			background-color: rgba($charcol, .2);
+		}
+
+		@mixin atTiny {
+			width: 100px;
+			padding: 15px 0 0 0;
+		}
+	}
+
+	&__menu {
+		position: relative;
+		float: right;
+		padding: 25px 25px;
+		width: 150px;
+
+		@mixin atTiny {
+			width: 110px;
+		}
+	}
+
+	&__link {
+		position: fixed;
+		text-transform: uppercase;
+		font-size: 0.9rem;
+		letter-spacing: 0.2em;
+		font-family: 'Dosis', sans-serif;
+		transition-duration: .26s;
+		box-shadow: 0 3px rgba($terra, .6); 
+
+		@mixin atTiny {
+			font-size: .7rem;
+		}
+
+		&:before {
+			content: "<";
+			display: inline-block;
+			padding-right: 5px;
+			font-size: 1.25rem;
+
+			@mixin atTiny {
+				font-size: .9rem;
+			}
+		}
+
+		@mixin hover {
+			&:hover {
+				font-weight: 500;
+				box-shadow: 0 3px $charcol;
+			}
+		}
+
+		&--dark {
+			background-color: rgba(#fff, .8);
+			padding: 0 7px 5px 7px;
+			border: 1px solid #111;
+			box-shadow: none;
+
+			@mixin hover {
+				&:hover {
+					background-color: rgba($lightGreen, 1);
+					
+				}
+			}
+		}
+	}
+}

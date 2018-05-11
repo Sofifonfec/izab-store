@@ -40,7 +40,7 @@ class StickyHeader {
 			},
 			offset: "7%"
 		});
-	}
+	}	
 
 	createSiteSectionWaypoints() {
 		var that = this;

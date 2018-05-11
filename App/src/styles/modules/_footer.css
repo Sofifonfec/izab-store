@@ -118,43 +118,25 @@ footer {
 		@mixin atMedium {
 			margin-top: 100px;
 		}
+
+		@mixin hover {
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
 	}
 
 	&__btn {
-		border: 1px solid rgba(#111, .5);
-		padding: 5px 30px; 
+		padding: .4375rem 1.875rem; 
 		text-transform: uppercase;
-		font-weight: 500;
 		font-size: 1rem;
-		font-weight: 600;
-		border-radius: 2px;
-		letter-spacing: 0.180em;
-		background-color: rgba($charcol, .3);
-		
-		transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-
-		@mixin atMedium {
-			padding: 5px 30px;
-			font-size: 1rem;
-		}
 
 		@mixin atXLarge {
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 		}
 
 		@mixin atTiny {
-			padding: 3px 25px;
-			font-size: 0.9rem;
-		}
-		
-		@mixin hover {
-			
-			&:hover {
-				background-color: rgba($mainOrange, .5);
-				border: 1px solid rgba(#111, .5);
-				
-				font-weight: 600;
-			}
+			font-size: 0.8rem;
 		}
 	}
 	
