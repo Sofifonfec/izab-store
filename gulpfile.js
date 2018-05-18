@@ -10,6 +10,12 @@ const hexrgba = require('postcss-hexrgba');
 const watch = require('gulp-watch');
 const browserSync = require('browser-sync').create();
 const webpack = require('webpack');
+const imagemin = require('gulp-imagemin');
+const del = require('del');
+const usemin = require('gulp-usemin');
+const rev = require('gulp-rev');
+const cssnano = require('gulp-cssnano');
+const uglify = require('gulp-uglify');
 
 // STYLES TASK POSTCSS SET UP
 
@@ -68,3 +74,43 @@ gulp.task('cssInject', ['styles'], function() {
 gulp.task('scriptsRefresh', ['scripts'], function() {
 	browserSync.reload();
 });
+
+
+// PREVIEW DIST FOLDER IN THE BROWSER
+gulp.task('previewDist', function() {
+	browserSync.init({
+		notify: false,
+		server: {
+			baseDir: 'docs'
+		}
+	});
+});	
+
+// PREPARING FILES TO GO LIVE
+
+gulp.task('deleteDistFolder', function() {
+	return del('./docs');
+});
+
+// task to copy images to dist folder
+gulp.task('optimizeImages', ['deleteDistFolder'], function() {
+	return gulp.src(['./App/src/images/**/*'])
+		.pipe(imagemin({
+			progressive: true,
+			interlaced: true,
+			multipass: true
+		}))
+		.pipe(gulp.dest('./docs/src/images'));
+});
+
+// task to copy styles and scripts to dist folder
+gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], function() {
+	return gulp.src('./App/*.html')
+		.pipe(usemin({
+			css: [function() {return rev()}, function() {return cssnano()}],
+			js: [function() {return rev()}, function() {return uglify()}]
+		}))
+		.pipe(gulp.dest('./docs'));
+});
+
+gulp.task('build', ['deleteDistFolder', 'optimizeImages', 'usemin']);
