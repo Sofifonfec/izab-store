@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-class CreaModal {
+class InnerModal {
 	constructor() {
 		this.openModalButton = $('.open-modal');
 		this.modal = $('.modal');
@@ -36,4 +36,4 @@ class CreaModal {
 	}
 }
 
-export default CreaModal;
+export default InnerModal;

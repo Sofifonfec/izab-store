@@ -1,11 +1,11 @@
 import $ from 'jquery';
 import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoints';
 
-class CreaStickyNav {
+class InnerStickyNav {
 	constructor() {
 		this.lazyImages = $('.lazyload');
 		this.headerNav = $('.inner-pages-nav__link');
-		this.navTriggerElement = $(".grid-headline__title");
+		this.navTriggerElement = $(".inner-large-hero__title");
 		this.createNavWaypoint();
 		this.refreshWaypoints();
 	}
@@ -32,4 +32,4 @@ class CreaStickyNav {
 	}	
 }
 
-export default CreaStickyNav;
+export default InnerStickyNav;

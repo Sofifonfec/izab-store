@@ -74,7 +74,7 @@
 			@mixin hover {
 				&:hover {
 					background-color: rgba($lightGreen, 1);
-					
+					box-shadow: none;
 				}
 			}
 		}

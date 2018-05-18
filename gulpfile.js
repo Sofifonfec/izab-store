@@ -1,6 +1,3 @@
-// imports
-require('./gulp/sprites.js');
-
 // packages
 const gulp = require('gulp'); 
 const postcss = require('gulp-postcss');  

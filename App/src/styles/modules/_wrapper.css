@@ -20,6 +20,15 @@
 		}
 	}
 
+	&--no-padding {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&--larger {
+		max-width: 1700px;
+	}
+
 	.wrapper {
 		padding-left: 0;
 		padding-right: 0;

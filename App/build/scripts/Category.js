@@ -11218,9 +11218,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var CreaModal = function () {
-	function CreaModal() {
-		_classCallCheck(this, CreaModal);
+var InnerModal = function () {
+	function InnerModal() {
+		_classCallCheck(this, InnerModal);
 
 		this.openModalButton = (0, _jquery2.default)('.open-modal');
 		this.modal = (0, _jquery2.default)('.modal');
@@ -11228,7 +11228,7 @@ var CreaModal = function () {
 		this.events();
 	}
 
-	_createClass(CreaModal, [{
+	_createClass(InnerModal, [{
 		key: 'events',
 		value: function events() {
 			// clicking open modal button
@@ -11263,10 +11263,10 @@ var CreaModal = function () {
 		}
 	}]);
 
-	return CreaModal;
+	return InnerModal;
 }();
 
-exports.default = CreaModal;
+exports.default = InnerModal;
 
 /***/ }),
 /* 3 */
@@ -11293,18 +11293,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var CreaStickyNav = function () {
-	function CreaStickyNav() {
-		_classCallCheck(this, CreaStickyNav);
+var InnerStickyNav = function () {
+	function InnerStickyNav() {
+		_classCallCheck(this, InnerStickyNav);
 
 		this.lazyImages = (0, _jquery2.default)('.lazyload');
 		this.headerNav = (0, _jquery2.default)('.inner-pages-nav__link');
-		this.navTriggerElement = (0, _jquery2.default)(".grid-headline__title");
+		this.navTriggerElement = (0, _jquery2.default)(".inner-large-hero__title");
 		this.createNavWaypoint();
 		this.refreshWaypoints();
 	}
 
-	_createClass(CreaStickyNav, [{
+	_createClass(InnerStickyNav, [{
 		key: 'refreshWaypoints',
 		value: function refreshWaypoints() {
 			this.lazyImages.on('load', function () {
@@ -11329,10 +11329,10 @@ var CreaStickyNav = function () {
 		}
 	}]);
 
-	return CreaStickyNav;
+	return InnerStickyNav;
 }();
 
-exports.default = CreaStickyNav;
+exports.default = InnerStickyNav;
 
 /***/ }),
 /* 4 */,
@@ -11351,18 +11351,18 @@ exports.default = CreaStickyNav;
 "use strict";
 
 
-var _CreaModal = __webpack_require__(2);
+var _InnerModal = __webpack_require__(2);
 
-var _CreaModal2 = _interopRequireDefault(_CreaModal);
+var _InnerModal2 = _interopRequireDefault(_InnerModal);
 
-var _CreaStickyNav = __webpack_require__(3);
+var _InnerStickyNav = __webpack_require__(3);
 
-var _CreaStickyNav2 = _interopRequireDefault(_CreaStickyNav);
+var _InnerStickyNav2 = _interopRequireDefault(_InnerStickyNav);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var creaStickyNav = new _CreaStickyNav2.default();
-var creaModal = new _CreaModal2.default();
+var innerStickyNav = new _InnerStickyNav2.default();
+var innerModal = new _InnerModal2.default();
 
 /***/ })
 /******/ ]);

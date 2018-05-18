@@ -7,7 +7,7 @@
 	box-sizing: border-box;
 
 	@mixin atMedium {
-		background: url("../../src/images/header-test4.jpg") no-repeat top center fixed;
+		background: url("../../src/images/header.jpg") no-repeat top center fixed;
 		background-size: cover;
 	}
 
@@ -76,3 +76,4 @@
 		}
 	}
 }
+

@@ -1,5 +1,5 @@
-import CreaModal from './modules/CreaModal';
-import CreaStickyNav from './modules/CreaStickyNav';
+import InnerModal from './modules/InnerModal';
+import InnerStickyNav from './modules/InnerStickyNav';
 
-var creaStickyNav = new CreaStickyNav();
-var creaModal = new CreaModal();
+var innerStickyNav = new InnerStickyNav();
+var innerModal = new InnerModal();

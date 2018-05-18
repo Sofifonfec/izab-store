@@ -1,0 +1,60 @@
+.inner-large-hero {
+	height: 240px;
+	background: url("../../src/images/header-category-small.jpg") no-repeat top center fixed;
+	background-size: cover;
+	max-width: 100%;
+	position: relative;
+	text-align: center;
+
+	@mixin atXSmall {
+		height: 270px;
+	}
+
+/* Category page background image */
+	@mixin atMedium {
+		background: url("../../src/images/header-category.jpg") no-repeat top center fixed;
+		background-size: cover;
+	}
+
+	@mixin atMedium {
+		height: 350px;
+	}
+
+/* Createurs page background image */
+	&--crea {
+		background: url("../../src/images/header-crea-small.jpg") no-repeat top center fixed;
+		background-size: cover;
+
+		@mixin atSmall {
+			background: url("../../src/images/header-crea.jpg") no-repeat top center fixed;
+		}
+	}
+
+	&__title {
+		position: absolute;
+		bottom: 25%;
+		width: 100%;
+		font-weight: 400;
+		font-size: 1.5rem;
+		line-height: 2rem;
+
+		@mixin atMedium {
+			font-size: 2rem;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 200%;
+			transform: translateX(-50%);
+			width: 150px;
+			height: .8px;
+			background-color: rgba($charcol, .3);
+
+			@mixin atXSmall {
+				top: 220%;
+			}
+		}
+	}
+}
